@@ -1,0 +1,78 @@
+.features {
+  @extend %section;
+}
+
+.features__list {
+  @extend %list;
+
+  @media screen and (min-width: $tablett) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.features__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  color: $title-text-color;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+.features__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.features__item {
+  display: block;
+  // width: 450px;
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $tablett) and (max-width: 1199px) {
+    width: 354px;
+    margin-right: 30px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 270px;
+    margin-right: 30px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.feature-icons {
+  @include centeredFlex;
+
+  // width: 450px;
+
+  @media screen and (min-width: $tablett) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 270px;
+  }
+
+  height: 120px;
+  background-color: $background-color;
+  margin-bottom: 30px;
+}

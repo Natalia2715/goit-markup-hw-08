@@ -1,0 +1,39 @@
+.work {
+  @media screen and (max-width: $desktop) {
+    display: none;
+  }
+  @extend %section;
+  padding-top: 0;
+}
+
+.work__list {
+  display: flex;
+  @extend %list;
+}
+
+.work__item {
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.work__label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  margin: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: $primary-white-color;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
