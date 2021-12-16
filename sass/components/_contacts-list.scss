@@ -2,12 +2,17 @@
   @extend %list;
   margin-left: auto;
   display: flex;
-  @media screen and (max-width: 1999px) {
+  @media screen and (max-width: 1199px) {
     flex-direction: column;
   }
 
   @media screen and (max-width: 767px) {
     display: none;
+  }
+}
+.contacts__item:not(:last-child) {
+  @media screen and (min-width: $desktop) {
+    margin-right: 50px;
   }
 }
 .contacts__link {
@@ -32,11 +37,9 @@
     color: $accent-color;
     fill: $accent-color;
   }
-}
 
-@media screen and (min-width: 1999px) {
-  .contacts__item:not(:last-child) {
-    margin-right: 50px;
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
   }
 }
 
